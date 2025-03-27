@@ -13,6 +13,7 @@ class generator;
     tr=new();
     repeat(10)
       begin
+        #0;
         
         tr.randomize();
        // $display("------------------------------------------");
@@ -20,7 +21,8 @@ class generator;
         gen2drv.put(tr);
         
         
-        @(my_event);
+        
+      @(my_event);
       end
   endtask
   
