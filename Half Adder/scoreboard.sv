@@ -20,13 +20,10 @@ class scoreboard;
         
      
         
-        if(tr.a^tr.b==tr.sum)begin
-          if(tr.a&tr.b==tr.carry)
-          begin
+        if(((tr.a ^ tr.b) == tr.sum) && ((tr.a & tr.b) == tr.carry))begin
           $display("*****************************************");
-            $display("              PASSED");
+          $display("              PASSED");
           $display("*****************************************");
-          end
         end
         else
           begin
@@ -35,8 +32,9 @@ class scoreboard;
             $display("*****************************************");
           end
      
-        
+       #1; 
         -> my_event;
+       
       end
   endtask
 endclass
