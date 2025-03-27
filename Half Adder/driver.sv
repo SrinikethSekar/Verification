@@ -14,7 +14,7 @@ class driver;
   task main();
     repeat(10)
       begin
-               
+              
 
         gen2drv.get(tr);
         vi.a=tr.a;
