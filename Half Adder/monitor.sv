@@ -22,7 +22,7 @@ class monitor;
         mon2scr.put(tr);
         
         tr.display("Monitor Class Signals");
-
+#1;
       end
   endtask
   
