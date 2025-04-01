@@ -1,19 +1,14 @@
-module d_ff(
-  input clk,
-  input rst,
-  input data,
-  output q_b,
-  output reg q);
+module d_ff(flipflop ff);
   
-  always@(posedge clk or posedge rst)
+  always@(posedge ff.clk or posedge ff.rst)
     begin
-      if(rst)
-        q<=0;
+      if(ff.rst)
+        ff.q<=0;
       else
-        q<=data;
+        ff.q<=ff.data;
       
     end
   
-  assign q_b=~q;
+  assign ff.q_b=~ff.q;
  
 endmodule
